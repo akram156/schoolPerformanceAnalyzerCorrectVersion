@@ -11,43 +11,51 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendVerificationEmail = async (email, code) => {
-  console.log("Testing SMTP connection...");
+  try {
+    console.log("Testing SMTP connection...");
 
-  await transporter.verify();
+    await transporter.verify();
 
-  console.log("SMTP connection successful");
-  const info = await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: email,
+    console.log("SMTP connection successful");
 
-    subject: "School Analyzer - Email Verification",
+    const info = await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "School Analyzer - Email Verification",
+      html: `
+        <div style="font-family: Arial, sans-serif;">
+          <h2>Welcome to School Analyzer</h2>
 
-    html: `
-      <div style="font-family: Arial, sans-serif;">
-      <h2>Welcome to School Analyzer</h2>
+          <p>
+            Thank you for creating your account.
+          </p>
 
-      <p>
-        Thank you for creating your account.
-      </p>
+          <p>
+            Use the following verification code to confirm your email address
+            or reset your password:
+          </p>
 
-      <p>
-        Use the following verification code to confirm your email address or reset your password:
-      </p>
+          <h1>${code}</h1>
 
-      <h1>${code}</h1>
+          <p>
+            This code is required to activate your School Analyzer account
+            or reset your password.
+          </p>
 
-      <p>
-        This code is required to activate your School Analyzer account or reset your password.
-      </p>
+          <p>
+            School Analyzer
+          </p>
+        </div>
+      `,
+    });
 
-      <p>
-        School Analyzer
-      </p>
-    </div>
+    console.log("Email sent successfully:", info.messageId);
 
-      
-    `,
-  });
+    return info;
+  } catch (error) {
+    console.error("NODEMAILER ERROR:", error);
+    throw error;
+  }
 };
 
 module.exports = sendVerificationEmail;
