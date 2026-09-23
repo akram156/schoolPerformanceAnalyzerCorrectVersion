@@ -3,6 +3,7 @@ import "./ResetPassword.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../../components/spinner/Spinner";
+import API_URL from "../../config/api";
 
 const ResetPassword = () => {
   const [code, setCode] = useState("");
@@ -21,7 +22,7 @@ const ResetPassword = () => {
       e.preventDefault();
       setIsVerifing(true);
       const result = await axios.post(
-        "http://localhost:9825/api/reset/resetPassword",
+        `${API_URL}/api/reset/resetPassword`,
         {
           email,
           code,
@@ -45,7 +46,7 @@ const ResetPassword = () => {
       e.preventDefault();
       setIsVerifing(true);
       const result = await axios.put(
-        "http://localhost:9825/api/reset/resetPassword2",
+        `${API_URL}/api/reset/resetPassword2`,
         {
           email,
           password,

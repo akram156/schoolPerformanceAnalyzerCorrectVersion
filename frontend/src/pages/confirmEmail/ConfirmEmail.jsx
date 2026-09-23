@@ -3,6 +3,7 @@ import "./ConfirmEmail.css";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../../config/api";
 
 const ConfirmEmail = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const ConfirmEmail = () => {
   const handleVerification = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:9825/api/verification/verify",
+        `${API_URL}/api/verification/verify`,
         {
           email: email,
           code: code,

@@ -67,6 +67,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import Spinner from "../../components/spinner/Spinner";
 import Loading from "../../components/loading/Loading";
+import API_URL from "../../config/api";
 
 const DashboardLayout = ({
   islightMode,
@@ -85,7 +86,7 @@ const DashboardLayout = ({
     try {
       const token = localStorage.getItem("token");
       const result = await axios.get(
-        "http://localhost:9825/api/authorization/current",
+        `${API_URL}/api/authorization/current`,
         {
           headers: {
             Authorization: token,
@@ -109,7 +110,7 @@ const DashboardLayout = ({
     try {
       const token=localStorage.getItem("token")
       const result = await axios.get(
-        "http://localhost:9825/api/getAnalyses/allAnalyses",
+        `${API_URL}/api/getAnalyses/allAnalyses`,
         {
           headers: {
             Authorization: token,

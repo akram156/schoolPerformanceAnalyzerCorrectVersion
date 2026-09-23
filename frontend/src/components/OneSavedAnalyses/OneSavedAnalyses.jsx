@@ -4,6 +4,7 @@ import DropDown from "../dropDown/DropDown";
 import translations from "../../translator";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../../config/api";
 const OneSavedAnalyses = ({ language, analyse, getAllAnalyses }) => {
   const t = translations[language];
   const [dropDownOpen, setDropDownOpen] = useState(false);
@@ -30,7 +31,7 @@ const OneSavedAnalyses = ({ language, analyse, getAllAnalyses }) => {
   const renameAnalyse = async (newAnalyseName) => {
     try {
       const result = await axios.put(
-        `http://localhost:9825/api/edit/rename/${analyse._id}`,
+        `${API_URL}/api/edit/rename/${analyse._id}`,
         { name: newAnalyseName },
       );
       await getAllAnalyses();
@@ -43,7 +44,7 @@ const OneSavedAnalyses = ({ language, analyse, getAllAnalyses }) => {
     setIsDeleting(true)
     try {
       const result = await axios.delete(
-        `http://localhost:9825/api/edit/delete/${analyse._id}`,
+        `${API_URL}/api/edit/delete/${analyse._id}`,
       );
       await getAllAnalyses();
       setDropDownOpen(false);

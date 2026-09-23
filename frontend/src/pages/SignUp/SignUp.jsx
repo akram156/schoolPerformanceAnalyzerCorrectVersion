@@ -3,6 +3,7 @@ import "./SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../../components/spinner/Spinner";
+import API_URL from "../../config/api";
 const SignUp = () => {
   const [showingSignUpPassword, setShowingSignUpPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -29,7 +30,7 @@ const SignUp = () => {
         return;
       }
       const result = await axios.post(
-        "http://localhost:9825/api/user/register",
+        `${API_URL}/api/user/register`,
         newUser,
       );
       // localStorage.setItem("token", result.data.token);

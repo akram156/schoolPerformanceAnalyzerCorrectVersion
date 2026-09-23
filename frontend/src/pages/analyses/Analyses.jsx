@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../../components/loading/Loading";
 import "./Analyses.css";
 import translations from "../../translator";
+import API_URL from "../../config/api";
 const Analyses = ({ language }) => {
   const { id } = useParams();
   const [analyse, setAnalyse] = useState(null);
@@ -16,7 +17,7 @@ const Analyses = ({ language }) => {
     try {
       const token = localStorage.getItem("token");
       const result = await axios.get(
-        `http://localhost:9825/api/analysis/${id}`,
+        `${API_URL}/api/analysis/${id}`,
         {
           headers: {
             authorization: token,

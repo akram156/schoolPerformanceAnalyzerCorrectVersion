@@ -8,6 +8,7 @@ import FileUploader from "../../components/fileUploader/FileUploader";
 import SchoolYear from "../../components/schoolYear/SchoolYear";
 import translations from "../../translator";
 import { useNavigate } from "react-router-dom";
+import API_URL from "../../config/api";
 const NewAlalyses = ({ language }) => {
   const [currentState, setCurrentState] = useState(1);
   const [analysesData, setAnalysesData] = useState({
@@ -31,7 +32,7 @@ const NewAlalyses = ({ language }) => {
       formData.append("file", analysesData.file);
       const token = localStorage.getItem("token");
       const result = await axios.post(
-        "http://localhost:9825/api/analysis/newAnalysis",
+        `${API_URL}/api/analysis/newAnalysis`,
         formData,
         {
           headers: {

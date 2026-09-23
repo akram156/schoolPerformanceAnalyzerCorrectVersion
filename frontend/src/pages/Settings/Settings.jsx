@@ -3,6 +3,7 @@ import "./Settings.css";
 import translations from "../../translator";
 import { useOutletContext } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../../config/api";
 
 const Settings = ({ islightMode, setIslightmode, language, setLanguage }) => {
   // -------------------------
@@ -55,7 +56,7 @@ const Settings = ({ islightMode, setIslightmode, language, setLanguage }) => {
     // send profile data to your Express backend
     try {
       const result = await axios.put(
-        "http://localhost:9825/api/setting/edit",
+        `${API_URL}/api/setting/edit`,
         profile,
       );
       await getCurrentUser();
@@ -112,7 +113,7 @@ const Settings = ({ islightMode, setIslightmode, language, setLanguage }) => {
       formData.append("profileImage", file);
       const token = localStorage.getItem("token");
       const result = await axios.put(
-        "http://localhost:9825/api/setting/profilePicture",
+        `${API_URL}/api/setting/profilePicture`,
         formData,
         {
           headers: {
@@ -154,7 +155,7 @@ const Settings = ({ islightMode, setIslightmode, language, setLanguage }) => {
       e.preventDefault();
 
       const result = await axios.put(
-        "http://localhost:9825/api/setting/changePassword",
+        `${API_URL}/api/setting/changePassword`,
         { id: currentUser._id, ...passwordData },
       );
       alert(result.data.msg);
