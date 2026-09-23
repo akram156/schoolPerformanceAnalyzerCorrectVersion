@@ -1,0 +1,107 @@
+.mainSignupContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.rightSignupContainer {
+  width: 40vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftSignupContainer {
+  width: 60vw;
+  /* background-color: #2563eb; */
+  background-image: url("bg2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centeredLeftContainer {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+  align-items: center;
+}
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  h4 {
+    margin: 0;
+    font-size: 20px;
+  }
+  p {
+    margin: 0;
+    font-size: 10px;
+    color: gray;
+  }
+}
+
+.fullNameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.email-icon {
+  position: absolute;
+  top: 36px;
+  left: 8px;
+  color: gray;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.key-icon {
+  position: absolute;
+  top: 36px;
+  left: 8px;
+  color: gray;
+  cursor: pointer;
+}
+
+.info-icon {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  color: gray;
+}
+
+.licenceCalificationContainer{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+gap: 6px;
+}
+.licenceClarification{
+  font-size: 10px;
+  color: gray;
+}
+
+.info-icon2{
+  color: #2563eb;
+}

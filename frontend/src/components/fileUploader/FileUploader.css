@@ -1,0 +1,259 @@
+.fileUploaderContainer {
+  width: 100%;
+}
+
+.uploadTitle h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.uploadTitle p {
+  margin-top: 5px;
+  color: #8a98ad;
+  font-size: 14px;
+}
+
+/* Upload box */
+
+.uploadBox {
+  margin-top: 22px;
+  height: 270px;
+
+  border: 2px dashed #dce4ef;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.uploadBox:hover {
+  border-color: var(--icon);
+  background-color: var(--hover);
+}
+
+.uploadIcon {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 15px;
+
+  background-color: #eef5ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+  font-size: 22px;
+}
+
+.uploadBox h4 {
+  margin-top: 18px;
+  margin-bottom: 5px;
+}
+
+.uploadBox p {
+  color: #8a98ad;
+  font-size: 13px;
+}
+
+.uploadBox p span {
+  color: #2563eb;
+}
+
+.excelInfo {
+  margin-top: 12px;
+
+  padding: 8px 14px;
+
+  border: 1px solid #dce4ef;
+  border-radius: 20px;
+
+  color: #8a98ad;
+  font-size: 12px;
+}
+
+.excelInfo i {
+  margin-right: 7px;
+}
+
+
+/* =========================
+   SELECTED FILE
+========================= */
+
+.fileSelectedContainer {
+  margin-top: 22px;
+}
+
+.fileInformation {
+  padding: 15px;
+
+  border-radius: 15px;
+
+  background-color: var(--background);
+  border: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+}
+
+.fileIcon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.fileDetails {
+  margin-left: 12px;
+  flex: 1;
+}
+
+.fileDetails h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.fileDetails p {
+  margin: 5px 0 0;
+
+  color: #8a98ad;
+
+  font-size: 12px;
+}
+
+.fileActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.removeFileButton {
+  border: none;
+  background: transparent;
+
+  color: #ef4444;
+
+  cursor: pointer;
+
+  font-size: 15px;
+}
+
+.removeFileButton:hover {
+  color: #dc2626;
+}
+
+.validIcon {
+  color: #16a34a;
+  font-size: 18px;
+}
+
+
+/* =========================
+   VALID MESSAGE
+========================= */
+
+.fileValidMessage {
+  margin-top: 12px;
+
+  padding: 15px;
+
+  border-radius: 15px;
+
+  background-color: var(--background);
+  border: 1px solid #c9f3d8;
+
+  display: flex;
+  align-items: flex-start;
+
+  color: #16a34a;
+}
+
+.fileValidMessage i {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.fileValidMessage strong {
+  font-size: 13px;
+}
+
+.fileValidMessage p {
+  margin: 5px 0 0;
+
+  color: #557064;
+  font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.fileUploaderContainer hr {
+  margin-top: 25px;
+
+  border: none;
+  border-top: 1px solid #e3e8ef;
+}
+
+.fileUploaderFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 15px;
+}
+
+.fileUploaderFooter span {
+  color: #8a98ad;
+  font-size: 12px;
+}
+
+.previous {
+  padding: 8px 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text);
+  background-color: var(--background);
+
+  cursor: pointer;
+}
+
+.generateButton {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: #2563eb;
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 500;
+}
+
+.generateButton:disabled {
+  background-color: #edf0f5;
+  color: #c4cbd5;
+  cursor: not-allowed;
+}

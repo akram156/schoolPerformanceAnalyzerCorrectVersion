@@ -1,0 +1,145 @@
+.savedAnalysesMainContainer {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  .savedAnalysesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "inter";
+    width: 100%;
+    .savedAnalysestitle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .folderIconContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #2563eb;
+        /* padding: 10px; */
+        border-radius: 10px;
+        color: white;
+      }
+      .titleContainer {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          margin: 0px;
+        }
+        p {
+          margin: 0px;
+          font-size: 13px;
+          color: gray;
+        }
+      }
+    }
+  }
+
+  .filterContainer {
+    position: relative;
+    i {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: gray;
+    }
+    input {
+      width: 400px;
+      padding: 7px;
+      padding-left: 35px;
+      border-radius: 10px;
+      font-size: 17px;
+      border: 1px solid gray;
+    }
+  }
+  .savedAnalysesCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+}
+.empty-analyses {
+  width: 100%;
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background-color: var(--background);
+  border-radius: 12px;
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.empty-analyses-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #eff6ff;
+  border-radius: 50%;
+
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.empty-analyses h2 {
+  margin: 0 0 10px;
+
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.empty-analyses p {
+  max-width: 430px;
+
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+@media (max-width: 600px) {
+  .empty-analyses {
+    min-height: 300px;
+    padding: 30px 15px;
+  }
+
+  .empty-analyses h2 {
+    font-size: 20px;
+  }
+
+  .empty-analyses p {
+    font-size: 13px;
+  }
+}
+
+
+/* !!!!!!!!!! */
+@media (max-width: 1200px) {
+  .savedAnalysesCardsContainer {
+    grid-template-columns: repeat(2, minmax(280px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .savedAnalysesCardsContainer {
+    grid-template-columns: 1fr !important;
+  }
+}

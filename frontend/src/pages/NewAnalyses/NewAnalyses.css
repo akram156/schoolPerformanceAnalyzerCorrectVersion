@@ -1,0 +1,90 @@
+.newanalysesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "inter";
+  font-style: normal;
+  color: var(--text);
+}
+.insidenewanalysesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 700px;
+}
+.topnewanalysesContainer {
+  h3 {
+    margin: 0px;
+  }
+  p {
+    margin: 0px;
+    font-size: 12px;
+    color: gray;
+  }
+}
+
+.levelsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+  .stepContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    .step {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: gray;
+      font-size: 13px;
+    }
+    .stepactive {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #2563eb;
+      /* box-shadow: 0px 0px #2564eb8d 7px; */
+      border: 3px solid #2564eb1d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 13px;
+    }
+    .span {
+      font-size: 10px;
+      color: gray;
+    }
+    .spanactive {
+      font-size: 10px;
+      color: #2563eb;
+    }
+  }
+
+  .stepLine {
+    height: 1px;
+    background-color: gray;
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+  }
+}
+
+.mainnewanalysesContainer {
+  border: 1px solid rgba(128, 128, 128, 0.493);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.166);
+}

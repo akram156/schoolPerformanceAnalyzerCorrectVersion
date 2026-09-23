@@ -1,0 +1,43 @@
+.app.light {
+  --background: #ffffff;
+  --surface: #2564eb1f;
+  --text: #1e293b;
+  --secondary-text: #64748b;
+  --border: #e5e7eb;
+  --hover: #64676b11;
+  --profile: #2563eb;
+  --icon: #087bf5;
+  --select: rgb(243, 242, 242);
+  --Trimesterbackground: #1d4ed8;
+  --Trimestertext: #eff6ff;
+  --Studentsiconbackground: #eff6ff;
+  --Studentsicon: #2563eb;
+  --Averageiconbackground: #f5f3ff;
+  --Averageicon: #7c3aed;
+  --Successiconbackground: #f0fdf4;
+  --Successicon: #16a34a;
+  --Completedbadgebackground: #f0fdf4;
+  --Completedbadgetext: #15803d;
+}
+
+.app.dark {
+  --background: #0f172a;
+  --surface: #1e293b;
+  --text: #f8fafc;
+  --secondary-text: #94a3b8;
+  --border: #334155;
+  --hover: #1e293b;
+  --profile: #0f172a;
+  --icon: #ffffff;
+  --select: #ffffff;
+  --Trimesterbackground: #1e3a5f;
+  --Trimestertext: #93c5fd;
+  --Studentsiconbackground: #1e3a5f;
+  --Studentsicon: #60a5fa;
+  --Averageiconbackground: #30205c;
+  --Averageicon: #a78bfa;
+  --Successiconbackground: #16452d;
+  --Successicon: #86efac;
+  --Completedbadgebackground: #163b2a;
+  --Completedbadgetext: #86efac;
+}

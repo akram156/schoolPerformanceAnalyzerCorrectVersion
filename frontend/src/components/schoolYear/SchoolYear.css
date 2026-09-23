@@ -1,0 +1,89 @@
+.highSchoolYears {
+  display: flex;
+  justify-content: space-around;
+}
+.schoolYear {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: var(--text);
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.schoolYearactive {
+  border: 2px solid #2563eb;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #2563eb;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2564eb40;
+  cursor: pointer;
+}
+.middleSchoolYears {
+  display: flex;
+  justify-content: space-around;
+  /* .schoolYear {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(86, 86, 86);
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .schoolYearactive {
+    border: 2px solid #2563eb;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #2563eb;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2564eb40;
+    cursor: pointer;
+  } */
+}
+
+.schoolYearNextPrevious {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    width: 80px;
+    padding: 5px;
+    background-color: var(--background);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0.5px solid var(--border);
+    font-weight: bold;
+    color: var(--text);
+  }
+  .schoolYearNext{
+    background-color: #2563eb;
+    color: white;
+    border: none;
+  }
+}
+
+.hrLine{
+  display: flex;
+  flex: 1;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.225);
+}

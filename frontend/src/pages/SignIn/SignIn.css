@@ -1,0 +1,168 @@
+.mainContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  /* background-image: url("bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.leftContainer {
+  width: 60vw;
+  /* background-color: #2563eb; */
+  background-image: url("bg2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rightContainer {
+  width: 40vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centeredContainer {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 350px;
+  /* background-color: #2563eb; */
+}
+
+.logoContainer{
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
+  align-items: center;
+}
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  h4 {
+    margin: 0;
+    font-size: 20px;
+  }
+  p {
+    margin: 0;
+    font-size: 10px;
+    color: gray;
+  }
+}
+
+.insideFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  label {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  input {
+    border: 1px solid gray;
+    /* height: 30px; */
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-left: 27px;
+    border-radius: 20px;
+  }
+  input:focus {
+    border: 1px solid blue !important;
+    outline: none;
+    box-shadow: 0px 0px blue 5px;
+  }
+}
+.user-icon {
+  position: absolute;
+  top: 34px;
+  left: 8px;
+  color: gray;
+}
+
+.lock-icon {
+  position: absolute;
+  top: 35px;
+  left: 8px;
+  color: gray;
+}
+.emailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  /* background-color: blue; */
+}
+
+.passwordContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.forgetpasswordContaier {
+  width: 100%;
+  /* background-color: #2563eb; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  padding-right: 10px;
+  font-weight: 500;
+  align-items: center;
+}
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.buttonContainer {
+  /* background-color: black; */
+  button {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 1px 1px black 1px;
+    font-weight: 600;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+}
+
+.middleLineContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid gray;
+  }
+  span {
+    font-size: 13px;
+    color: gray;
+  }
+}
+
+.signUpOptionContainer {
+  font-size: 15px;
+  font-weight: 500;
+  color: gray;
+  display: flex;
+  /* background-color: #2563eb; */
+  justify-content: center;
+}
+.link {
+  text-decoration: none;
+  color: #2563eb;
+}

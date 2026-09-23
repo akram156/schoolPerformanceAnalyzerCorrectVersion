@@ -1,0 +1,826 @@
+/* =========================================
+   MAIN DASHBOARD
+========================================= */
+
+.mainDashboardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 100%;
+
+  padding: 25px;
+  box-sizing: border-box;
+
+  color: var(--text);
+  background-color: var(--background);
+}
+
+.insideDashboardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  gap: 30px;
+
+  width: 100%;
+  height: auto;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcomeDashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.welcomeDashboardContainer #dashboardName {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.welcomeDashboardContainer #dashboardWelcome {
+  margin: 0;
+
+  font-size: 14px;
+  color: #8a8f98;
+}
+
+/* =========================================
+   INFORMATION CARDS
+========================================= */
+/* =========================================
+   INFORMATION CARDS
+========================================= */
+
+.dashboardInformationContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  width: 100%;
+  gap: 15px;
+}
+
+/* Common card design */
+
+.totalAnalysesContainer,
+.middletotalAnalysesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 140px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background-color: var(--background);
+
+  color: gray;
+  font-size: 14px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.totalAnalysesContainer:hover,
+.middletotalAnalysesContainer:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(37, 99, 235, 0.35);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon containers */
+
+.totalAnalysesContainer .logcontainer,
+.middletotalAnalysesContainer .greenlogcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 13px;
+
+  box-sizing: border-box;
+}
+
+.totalAnalysesContainer .logcontainer {
+  background-color: rgba(37, 99, 235, 0.14);
+}
+
+.totalAnalysesContainer .logcontainer i {
+  color: #2563eb;
+}
+
+.middletotalAnalysesContainer .greenlogcontainer {
+  background-color: rgba(22, 163, 74, 0.14);
+}
+
+.middletotalAnalysesContainer .greenlogcontainer i {
+  color: #16a34a;
+}
+
+/* Information text */
+
+.informationcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex: 1;
+  min-width: 0;
+}
+
+.informationcontainer p {
+  margin: 0 0 6px;
+
+  white-space: nowrap;
+}
+
+.informationcontainer p:first-child {
+  font-size: 13px;
+  color: #8a8f98;
+}
+
+.informationcontainer p:last-child {
+  margin-bottom: 0;
+}
+
+/* Card values */
+
+#numberOfSavedAnalyses {
+  font-size: 27px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+#hoursFromLastUse {
+  font-size: 19px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+#licenceActivation {
+  font-size: 19px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* Graph containers */
+
+.analysecontainer,
+.analysecontainergreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 1;
+
+  width: 125px;
+  height: 85px;
+
+  padding: 8px;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.analysecontainer {
+  background-color: rgba(37, 99, 235, 0.08);
+}
+
+.analysecontainergreen {
+  background-color: rgba(22, 163, 74, 0.08);
+}
+
+.analysecontainer svg,
+.analysecontainergreen svg {
+  width: 100%;
+  max-width: 120px;
+}
+
+/* License card progress bar */
+
+.progressbarContainer {
+  width: 100%;
+  max-width: 220px;
+  height: 7px;
+
+  margin-top: 10px;
+
+  background-color: #e5e7eb;
+
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progressbar {
+  width: 70%;
+  height: 100%;
+
+  background-color: #2563eb;
+
+  border-radius: 20px;
+
+  transition: width 0.4s ease;
+}
+/* =========================================
+   OUR SERVICES
+========================================= */
+
+#ourservicesTitle {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+#ourservicesSubtitle {
+  margin: 5px 0 18px;
+
+  font-size: 12px;
+
+  color: #8a8f98;
+}
+
+/* Services grid */
+
+.ourservice {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+
+  width: 100%;
+}
+
+/* Common service card */
+
+.ourservice .highschool,
+.ourservice .middleschool,
+.ourservice .allstreams,
+.ourservice .academicyear,
+.ourservice .trimestercomparaison,
+.ourservice .saveyouranalyses {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+  min-height: 90px;
+
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(128, 128, 128, 0.2);
+
+  border-radius: 12px;
+
+  background-color: var(--background);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.ourservice .highschool:hover,
+.ourservice .middleschool:hover,
+.ourservice .allstreams:hover,
+.ourservice .academicyear:hover,
+.ourservice .trimestercomparaison:hover,
+.ourservice .saveyouranalyses:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Service icon containers */
+
+.ourservice .lefthighschool,
+.ourservice .leftmiddleschool,
+.ourservice .leftallstreams,
+.ourservice .leftacademicyear,
+.ourservice .lefttremestercomparaison,
+.ourservice .leftsaveyouranalyses {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 11px;
+
+  padding: 3px;
+
+  box-sizing: border-box;
+}
+
+/* High school */
+
+.ourservice .lefthighschool {
+  background-color: #2564eb20;
+}
+
+.ourservice .lefthighschool i {
+  color: #2563eb;
+}
+
+/* Middle school */
+
+.ourservice .leftmiddleschool {
+  background-color: rgba(0, 128, 0, 0.13);
+}
+
+.ourservice .leftmiddleschool i {
+  color: green;
+}
+
+/* All streams */
+
+.ourservice .leftallstreams {
+  background-color: #2564eb20;
+}
+
+.ourservice .leftallstreams i {
+  color: #2563eb;
+}
+
+/* Academic year */
+
+.ourservice .leftacademicyear {
+  background-color: rgba(255, 166, 0, 0.16);
+}
+
+.ourservice .leftacademicyear i {
+  color: orange;
+}
+
+/* Trimester comparison */
+
+.ourservice .lefttremestercomparaison {
+  background-color: rgba(255, 192, 203, 0.2);
+}
+
+.ourservice .lefttremestercomparaison i {
+  color: rgb(221, 86, 108);
+}
+
+/* Save analyses */
+
+.ourservice .leftsaveyouranalyses {
+  background-color: rgba(3, 203, 80, 0.16);
+}
+
+.ourservice .leftsaveyouranalyses i {
+  color: rgb(3, 203, 80);
+}
+
+/* Service text */
+
+.ourservice h5 {
+  margin: 0 0 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+.ourservice p {
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  color: #8a8f98;
+}
+
+/* =========================================
+   RECENT WORK
+========================================= */
+
+.recentworkContainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.recentworkContainer > h4 {
+  margin: 0 0 15px;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Table headings */
+
+.titlesContainer {
+  display: flex;
+
+  padding: 0 5px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.titlesContainer .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-size: 12px;
+
+  color: #8a8f98;
+}
+
+.titlesContainer .title p {
+  margin: 0 0 10px;
+}
+
+/* Column widths */
+
+#title1 {
+  width: 25%;
+}
+
+#title2 {
+  width: 18%;
+}
+
+#title3 {
+  width: 10%;
+}
+
+#title4 {
+  width: 10%;
+}
+
+#title5 {
+  width: 25%;
+}
+
+#title6 {
+  width: 12%;
+}
+
+/* Separator */
+
+.Line {
+  margin: 0;
+
+  border: 0;
+
+  border-top: 1px solid rgba(128, 128, 128, 0.16);
+}
+
+/* =========================================
+   VIEW ALL
+========================================= */
+
+.viewAllContainer {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 20px 0;
+}
+
+.viewAllContainer #link {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #2563eb;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: gap 0.2s ease;
+}
+
+.viewAllContainer #link:hover {
+  gap: 13px;
+}
+
+.viewAllContainer #link i {
+  margin-top: 3px;
+}
+
+/* =========================================
+   EMPTY RECENT WORK
+========================================= */
+
+.emptyRecentWork {
+  width: 100%;
+  min-height: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  border: 1px dashed var(--border);
+
+  border-radius: 12px;
+
+  background-color: var(--background);
+}
+
+.emptyRecentWork h3 {
+  margin: 0;
+
+  max-width: 450px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: #9ca3af;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* ---------- Tablets ---------- */
+
+/* @media (max-width: 900px) {
+  .mainDashboardContainer {
+    padding: 15px;
+  }
+
+  .dashboardInformationContainer {
+    gap: 12px;
+  }
+
+  .totalAnalysesContainer,
+  .middletotalAnalysesContainer {
+    width: calc(50% - 6px);
+  }
+
+  .totalAnalysesContainer:last-child {
+    width: 100%;
+  }
+
+  .ourservice {
+    grid-template-columns: repeat(2, minmax(0, 3fr));
+  }
+
+  .ourservice .highschool,
+  .ourservice .middleschool,
+  .ourservice .allstreams,
+  .ourservice .academicyear,
+  .ourservice .trimestercomparaison,
+  .ourservice .saveyouranalyses {
+    width: calc(50% - 8px);
+  }
+
+  .progressbarContainer {
+    width: 180px;
+  }
+} */
+
+/* ---------- Small tablets / large phones ---------- */
+
+@media (max-width: 1250px) {
+  .dashboardInformationContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .totalAnalysesContainer:last-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 900px) {
+  .mainDashboardContainer {
+    padding: 12px;
+  }
+
+  .insideDashboardContainer {
+    gap: 22px;
+  }
+
+  /* Statistics */
+
+  .dashboardInformationContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .totalAnalysesContainer:last-child {
+    grid-column: auto;
+  }
+
+  .totalAnalysesContainer,
+  .middletotalAnalysesContainer {
+    min-height: 115px;
+  }
+
+  .analysecontainer,
+  .analysecontainergreen {
+    width: 115px;
+    height: 75px;
+  }
+  /* Services */
+
+  .ourservice {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ourservice .highschool,
+  .ourservice .middleschool,
+  .ourservice .allstreams,
+  .ourservice .academicyear,
+  .ourservice .trimestercomparaison,
+  .ourservice .saveyouranalyses {
+    width: 100%;
+  }
+
+  /* Recent work */
+
+  .recentworkContainer {
+    overflow-x: auto;
+  }
+
+  .titlesContainer {
+    min-width: 650px;
+  }
+
+  .recentworkContainer > div {
+    min-width: 650px;
+  }
+
+  /* Progress */
+
+  .progressbarContainer {
+    width: 200px;
+  }
+}
+
+/* ---------- Phones ---------- */
+
+@media (max-width: 480px) {
+  .mainDashboardContainer {
+    padding: 10px;
+  }
+
+  .insideDashboardContainer {
+    gap: 18px;
+  }
+
+  /* Welcome */
+
+  #dashboardName {
+    font-size: 22px;
+  }
+
+  #dashboardWelcome {
+    font-size: 12px;
+  }
+
+  /* Statistics cards */
+
+  .totalAnalysesContainer,
+  .middletotalAnalysesContainer {
+    min-height: 90px;
+
+    padding: 12px;
+
+    gap: 10px;
+  }
+
+  .totalAnalysesContainer,
+  .middletotalAnalysesContainer {
+    min-height: 100px;
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .totalAnalysesContainer .logcontainer,
+  .middletotalAnalysesContainer .greenlogcontainer {
+    width: 38px;
+    height: 38px;
+  }
+
+  .analysecontainer,
+  .analysecontainergreen {
+    width: 90px;
+    height: 62px;
+    padding: 5px;
+  }
+
+  #numberOfSavedAnalyses {
+    font-size: 23px;
+  }
+
+  #hoursFromLastUse,
+  #licenceActivation {
+    font-size: 17px;
+  }
+
+  .progressbarContainer {
+    max-width: 150px;
+  }
+
+  /* Services */
+
+  #ourservicesTitle {
+    font-size: 18px;
+  }
+
+  #ourservicesSubtitle {
+    font-size: 11px;
+  }
+
+  .ourservice .highschool,
+  .ourservice .middleschool,
+  .ourservice .allstreams,
+  .ourservice .academicyear,
+  .ourservice .trimestercomparaison,
+  .ourservice .saveyouranalyses {
+    padding: 14px;
+  }
+
+  .ourservice h5 {
+    font-size: 14px;
+  }
+
+  .ourservice p {
+    font-size: 10px;
+  }
+
+  /* Recent work */
+
+  .recentworkContainer > h4 {
+    font-size: 18px;
+  }
+
+  .titlesContainer,
+  .recentworkContainer > div {
+    min-width: 650px;
+  }
+
+  .viewAllContainer {
+    margin: 15px 0;
+  }
+
+  /* Empty state */
+
+  .emptyRecentWork {
+    min-height: 150px;
+    padding: 20px;
+  }
+
+  .emptyRecentWork h3 {
+    font-size: 13px;
+  }
+}

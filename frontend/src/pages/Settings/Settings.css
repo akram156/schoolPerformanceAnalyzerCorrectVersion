@@ -1,0 +1,620 @@
+/* =========================
+   PAGE
+========================= */
+
+.settingsPage {
+  width: 100%;
+  min-height: 100%;
+  padding: 35px 45px;
+  box-sizing: border-box;
+  /* background-color: #f8fafc; */
+  font-family: "inter";
+  color: var(--text);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.settingsHeader {
+  margin-bottom: 25px;
+}
+
+.settingsHeader h2 {
+  margin: 0;
+  font-size: 28px;
+  /* color: #111827; */
+}
+
+.settingsHeader p {
+  margin-top: 7px;
+  color: #7b8ba7;
+  font-size: 14px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.settingsCard {
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: var(--background);
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  padding: 28px;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.settingsCard h3 {
+  margin: 0;
+
+  font-size: 17px;
+  color: var(--text);
+}
+
+/* =========================
+   PROFILE TOP
+========================= */
+
+.profileTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+/* =========================
+   PROFILE PICTURE
+========================= */
+
+.profilePictureWrapper {
+  position: relative;
+
+  width: 80px;
+  height: 80px;
+
+  margin-right: 18px;
+}
+
+.profilePicture {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.profilePicture.initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--profile);
+  border: 1px solid var(--border);
+  color: white;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* =========================
+   PLUS BUTTON
+========================= */
+
+.photoPlusButton {
+  position: absolute;
+
+  right: -3px;
+  bottom: 0;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid var(--border);
+  border-radius: 50%;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+/* =========================
+   PROFILE IDENTITY
+========================= */
+
+.profileIdentity h2 {
+  margin: 0;
+
+  font-size: 19px;
+  color: var(--text);
+}
+
+.profileIdentity p {
+  margin: 5px 0 10px;
+
+  color: #7b8ba7;
+
+  font-size: 13px;
+}
+
+/* =========================
+   CHANGE PHOTO
+========================= */
+
+.changePhotoButton {
+  padding: 6px 13px;
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  background-color: var(--background);
+
+  color: var(--icon);
+
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.changePhotoButton:hover {
+  background-color: var(--hover);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.settingsDivider {
+  width: 100%;
+  height: 1px;
+
+  background-color: #e3e8f0;
+
+  margin: 28px 0;
+}
+
+/* =========================
+   PROFILE FORM
+========================= */
+
+.profileForm {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.formGroup label {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+.formGroup input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  height: 43px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dce4ef;
+  border-radius: 22px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  color: black;
+
+  background-color: white;
+
+  transition: 0.2s;
+}
+
+.formGroup input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.formGroup input:disabled {
+  background-color: rgb(243, 242, 242);
+
+  color: black;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   PROFILE ACTIONS
+========================= */
+
+.profileActions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.editProfileButton,
+.saveButton,
+.cancelButton,
+.changePasswordButton {
+  height: 38px;
+
+  padding: 0 17px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Edit */
+
+.editProfileButton {
+  background-color: #2563eb;
+
+  color: white;
+
+  border: none;
+}
+
+.editProfileButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Save */
+
+.saveButton {
+  background-color: #2563eb;
+
+  color: white;
+
+  border: none;
+}
+
+.saveButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Cancel */
+
+.cancelButton {
+  background-color: white;
+
+  color: #334155;
+
+  border: 1px solid #d8e0ec;
+}
+
+.cancelButton:hover {
+  background-color: #f8fafc;
+}
+
+/* =========================
+   SECURITY CARD
+========================= */
+
+.securityCard {
+  margin-top: 10px;
+}
+
+/* =========================
+   SECURITY HEADER
+========================= */
+
+.securityHeader {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.securityHeader p {
+  margin: 6px 0 0;
+
+  color: #7b8ba7;
+
+  font-size: 13px;
+}
+
+/* =========================
+   CHANGE PASSWORD BUTTON
+========================= */
+
+.changePasswordButton {
+  background-color: var(--background);
+
+  color: var(--icon);
+
+  border: 1px solid #cdd9eb;
+}
+
+.changePasswordButton:hover {
+  background-color: var(--hover);
+
+  border-color: var(--icon);
+}
+
+/* =========================
+   PASSWORD STATUS
+========================= */
+
+.passwordStatus {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 25px;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background-color: var(--background);
+}
+
+.passwordIcon {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e8f0ff;
+
+  color: #2563eb;
+}
+
+.passwordStatus h4 {
+  margin: 0 0 4px;
+
+  font-size: 14px;
+
+  color: var(--text);
+}
+
+.passwordStatus p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #7b8ba7;
+}
+
+/* =========================
+   PASSWORD FORM
+========================= */
+
+.passwordForm {
+  margin-top: 25px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #e3e8f0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+/* Put current password across full width */
+
+.passwordForm .formGroup:first-child {
+  grid-column: 1 / -1;
+}
+
+/* =========================
+   PASSWORD REQUIREMENTS
+========================= */
+
+.passwordRequirements {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 14px;
+
+  border-radius: 10px;
+
+  background-color: #f1f6ff;
+
+  color: #55709d;
+
+  font-size: 12px;
+}
+
+.passwordRequirements i {
+  color: #2563eb;
+}
+
+/* =========================
+   PASSWORD ACTIONS
+========================= */
+
+.passwordActions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 5px;
+}
+.role{
+  width: 100%;
+
+  box-sizing: border-box;
+
+  height: 43px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dce4ef;
+  border-radius: 22px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  color: black;
+
+  background-color:white;
+
+  transition: 0.2s;
+}
+.role:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.formGroup select:disabled {
+  background-color:var(--select);
+;
+
+  color: black;
+  
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .settingsPage {
+    padding: 25px 20px;
+  }
+
+  .profileForm {
+    grid-template-columns: 1fr;
+  }
+
+  .passwordForm {
+    grid-template-columns: 1fr;
+  }
+
+  .passwordForm .formGroup:first-child {
+    grid-column: auto;
+  }
+
+  .passwordRequirements {
+    grid-column: auto;
+  }
+
+  .passwordActions {
+    grid-column: auto;
+  }
+
+  .securityHeader {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .profileTop {
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .settingsPage {
+    padding: 20px 12px;
+  }
+
+  .settingsCard {
+    padding: 20px;
+  }
+
+  .profileTop {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .profilePictureWrapper {
+    margin-right: 0;
+  }
+
+  .profileActions {
+    flex-direction: column;
+  }
+
+  .profileActions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .passwordActions {
+    flex-direction: column;
+  }
+
+  .passwordActions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .changePasswordButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

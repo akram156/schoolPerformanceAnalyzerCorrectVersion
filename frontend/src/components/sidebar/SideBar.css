@@ -1,0 +1,300 @@
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Inter", sans-serif;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background-color: var(--background);
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.pageNamesContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 28px;
+
+  box-sizing: border-box;
+}
+
+/* =====================================
+   NAVIGATION LINK
+===================================== */
+
+.directionContainer {
+  position: relative;
+
+  width: 82%;
+
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =====================================
+   ICON
+===================================== */
+
+.directionContainer .icons {
+  width: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: 16px;
+
+  color: var(--text);
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =====================================
+   HOVER
+===================================== */
+
+.directionContainer:hover {
+  background-color: var(--surface);
+
+  color: var(--icon);
+}
+
+.directionContainer:hover .icons {
+  color: var(--icon);
+
+  transform: scale(1.05);
+}
+
+/* =====================================
+   ACTIVE LINK
+===================================== */
+
+.directionContainer.active {
+  background-color: var(--surface);
+
+  color: var(--icon);
+
+  font-weight: 600;
+}
+
+/* Small blue indicator on the left */
+
+.directionContainer.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 9px;
+
+  width: 3px;
+
+  height: 26px;
+
+  border-radius: 0 5px 5px 0;
+
+  background-color: var(--profile);
+}
+
+.directionContainer.active .icons {
+  color: var(--icon);
+}
+
+/* =====================================
+   PROFILE AREA
+===================================== */
+
+.profileInformationmainContainer {
+  width: 100%;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid var(--border);
+}
+
+/* =====================================
+   USER CARD
+===================================== */
+
+.adminUserBottomContainer {
+  width: 100%;
+
+  min-height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 9px 10px;
+
+  box-sizing: border-box;
+
+  border-radius: 11px;
+
+  background-color: var(--background);
+
+  transition: background-color 0.2s ease;
+}
+
+.adminUserBottomContainer:hover {
+  background-color: var(--hover);
+}
+
+/* =====================================
+   PROFILE IMAGE
+===================================== */
+
+.imageProfileContainer {
+  flex-shrink: 0;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: var(--profile);
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  border: 2px solid var(--border);
+
+  box-sizing: border-box;
+}
+
+/* =====================================
+   USER INFORMATION
+===================================== */
+
+.profileInformationContainer {
+  min-width: 0;
+
+  flex: 1;
+}
+
+#userAdminName {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+#userEmail {
+  margin: 4px 0 0;
+
+  color: var(--text);
+
+  font-size: 10px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =====================================
+   MORE ICON
+===================================== */
+
+.profileMoreIcon {
+  flex-shrink: 0;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  padding: 5px;
+
+  border-radius: 5px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.profileMoreIcon:hover {
+  color: #334155;
+
+  background-color: #e2e8f0;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+  .directionContainer {
+    width: 90%;
+  }
+}

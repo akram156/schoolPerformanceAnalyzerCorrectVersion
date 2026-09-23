@@ -1,0 +1,26 @@
+.maintrimesterContainer{
+  display: flex;
+  flex-direction: column;
+  .trimesterContainer{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    .trimester{
+      border: 1px solid gray;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      
+    }
+    .trimesteractive{
+      border: 2px solid #2563eb;
+      background-color: #2564eb6d;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      color:#2563eb;
+    }
+  }
+}
